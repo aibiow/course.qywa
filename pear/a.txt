@@ -1,0 +1,1005 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- 引入Google字体 -->
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>梨大模型</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/element-ui/2.2.0/theme-chalk/index.css">
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_3045003_lkxtjaj4m6.css">
+        <link rel="stylesheet" href="js/rotation3D/rotation3D.css">
+        <style>
+            /* body{
+                background-color: #292a38;
+            } */
+            @media screen and (min-width: 769px) {
+                .rotation3D-baseMap{
+                    position: absolute; left: 10px; right: 0; top: 35%; margin: auto;
+                    width: 1312px; height: 516px;
+                    background: url("js/rotation3D/img/baseMap.png");
+                }
+                .single-slider {
+                    background-image: url(assets/images/main-slider/806.jpg) !important;
+                    background-position-y: 20% !important;
+                    backdrop-filter: blur(5px) brightness(0.8) contrast(0.9) !important;
+                    -webkit-backdrop-filter: blur(5px) brightness(0.8) contrast(0.9) !important;
+                }
+                .mobile-menu {
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .rotation3D-baseMap, .rotation3D, #rotation3D {
+                    display: none !important;
+                }
+                .single-slider {
+                    background: white !important;
+                    min-height: 100vh;
+                    padding: 70px 20px 20px;
+                    height: auto;
+                    overflow-y: auto;
+                    position: relative;
+                    z-index: 1;
+                }
+                .lab-links {
+                    width: 100% !important;
+                    margin-top: 60px;
+                }
+                .lab-links a {
+                    margin-left: 0 !important;
+                    margin-top: 15px !important;
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+                    padding: 10px;
+                }
+                .lab-links img {
+                    margin-right: 15px;
+                    width: 40px;
+                    height: 40px;
+                }
+                .mobile-menu {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-top: 30px;
+                    width: 100%;
+                }
+                .mobile-menu-item {
+                    background: #f5f5f5;
+                    padding: 15px;
+                    border-radius: 8px;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: 500;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                .services-box-05 {
+                     margin-bottom: 20px;
+                     padding: 15px;
+                     background: #fff;
+                     border-radius: 10px;
+                     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                 }
+                 .services-content-05 {
+                     padding: 15px 0;
+                 }
+                 .services-content-05 h4 {
+                     font-size: 18px;
+                     margin-bottom: 10px;
+                 }
+                 .services-content-05 p {
+                     font-size: 14px;
+                     line-height: 1.6;
+                     margin-bottom: 10px;
+                 }
+                 .services-icon-05 img {
+                     border-radius: 8px;
+                 }
+            }
+            .rotation3D-baseMap::before{
+                position: absolute; left: -12px; right: 0; top: 0; margin: auto; z-index: 99;
+                width: 342px; height: 318px; display: block; content: '';
+                background: url("js/rotation3D/img/li342.png");
+                animation: 10s bounceUpDown infinite;
+            }
+            .login-btn, .user-info {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                padding: 8px 16px;
+                background: #5a3e1f;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                z-index: 10001;
+            }
+            @media screen and (max-width: 768px) {
+                .login-btn, .user-info {
+                    position: fixed;
+                    right: 15px;
+                    top: 125px;
+                    font-size: 14px;
+                    padding: 6px 12px;
+                    z-index: 10003;
+                    background: #5a3e1f;
+                }
+                .user-dropdown {
+                    position: fixed;
+                    right: 15px;
+                    top: 50px;
+                    width: 120px;
+                }
+            }
+            .user-info {
+                display: none;
+                background: #5a3e1f;
+            }
+            .user-dropdown {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: #5a3e1f;
+                border: 1px solid #5a3e1f;
+                border-radius: 4px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                z-index: 10002;
+            }
+            .user-info:hover .user-dropdown {
+                display: block;
+            }
+            .user-dropdown button {
+                display: block;
+                width: 100%;
+                padding: 8px 16px;
+                border: none;
+                background: #5a3e1f;
+                text-align: center;
+                cursor: pointer;
+                color: white;
+                border-radius: 4px;
+                margin: 5px 0;
+            }
+            .user-dropdown button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+            .login-dialog {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 255, 255, 0.2); /* 增加透明度 */
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 30px rgba(0, 150, 136, 0.3); /* 减弱阴影 */
+                z-index: 10000;
+                backdrop-filter: blur(8px); /* 增加模糊效果 */
+                border: 1px solid rgba(255, 255, 255, 0.8); /* 半透明边框 */
+                width: 350px;
+            }
+            .login-dialog h3 {
+                color: #00796b;
+                text-align: center;
+                margin-bottom: 25px;
+                font-size: 22px;
+                font-weight: 600;
+            }
+            .login-form-group {
+                position: relative;
+                margin-bottom: 25px;
+            }
+            .login-form-group label {
+                display: block;
+                margin-bottom: 8px;
+                color: #00796b;
+                font-weight: 500;
+            }
+            .login-form-group input {
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                background: rgba(255, 255, 255, 0.8);
+                transition: all 0.3s;
+                font-size: 14px;
+            }
+            .login-form-group input:focus {
+                border-color: #00796b;
+                box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.2);
+                outline: none;
+            }
+            .login-form-actions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+            .login-form-actions button {
+                padding: 12px 25px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 500;
+                transition: all 0.3s;
+            }
+            .login-form-actions button[type="button"] {
+                background: #f5f5f5;
+                color: #555;
+            }
+            .login-form-actions button[type="submit"] {
+                background: linear-gradient(135deg, #00796b, #009688);
+                color: white;
+            }
+            .login-form-actions button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+            .change-password-dialog {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 255, 255, 0.2);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 30px rgba(0, 150, 136, 0.3);
+                z-index: 10000;
+                backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.8);
+                width: 350px;
+            }
+            .change-password-dialog h3 {
+                color: #00796b;
+                text-align: center;
+                margin-bottom: 25px;
+                font-size: 22px;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+          <div class="offcanvas-menu">
+             <span class="menu-close"><i class="fas fa-times"></i></span>
+             <form role="search" method="get" id="searchform"   class="searchform" action="http://wordpress.zcube.in/xconsulta/">
+                <input type="text" name="s" id="search" placeholder="Search"/>
+                <button><i class="fa fa-search"></i></button>
+             </form>
+             <div id="cssmenu3" class="menu-one-page-menu-container">
+                <ul  class="menu">
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="about.html">About Us</a></li>
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="services.html">Services</a></li>
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="pricing.html">Pricing </a></li>
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="team.html">Team </a></li>
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="projects.html">Cases Study</a></li>
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="blog.html">Blog</a></li>
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="contact.html">Contact</a></li>
+                </ul>
+             </div>
+             <div id="cssmenu2" class="menu-one-page-menu-container">
+                <ul id="menu-one-page-menu-12" class="menu">
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#home"><span>+8 12 3456897</span></a></li>
+                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#howitwork"><span>info@example.com</span></a></li>
+                </ul>
+             </div>
+          </div>
+          <div class="offcanvas-overly"></div>
+          <!-- offcanvas-end -->
+        <!-- main-area -->
+        <main>
+           <!-- slider-area -->
+            <section id="parallax" class="slider-area slider-two fix p-relative">
+                <div class="single-slider slider-bg slider-bg2 d-flex align-items-center" style="background-image: url(assets/images/main-slider/tea3.jpg);background-position-y: 20%;display: flex;  position: relative; flex-direction: column; overflow: hidden;isolation: isolate; backdrop-filter: blur(5px) brightness(0.8) contrast(0.9); -webkit-backdrop-filter: blur(5px) brightness(0.8) contrast(0.9);">
+                    <div style="position: relative;width: 100%;height: 20%;background: transparent; z-index: 9999;display: flex;align-items: left;flex: 1;flex-direction: column; ">
+                        <button id="login-btn" class="login-btn" onclick="handleLoginButtonClick()">登录</button>
+                        <div class="user-info" id="user-info">
+                            <span id="username-display"></span>
+                            <div class="user-dropdown">
+                                <button onclick="handleChangePassword()">修改密码</button>
+                                <button onclick="handleLogout()">退出登录</button>
+                            </div>
+                        </div>
+                        <!-- 第一个实验室 -->
+                    <div class="lab-links" style="width: 50%;margin-top: 50px;">
+                        <div>
+                            <a href="https://tealab.ahau.edu.cn/index.htm" style="display: flex; align-items: center; text-decoration: none;">
+                                <img src="assets\images\tea\logo.png" alt="实验室logo" 
+                                    style="width: 4rem; height: 4rem; ">
+                                <span style="color: rgb(9, 163, 9); font-size: 1.5rem;">
+                                    <b>作物遗传与种质创新国家重点实验室</b>
+                                </span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="http://elab.ulenp.com/" style="display: flex; align-items: center; text-decoration: none;margin-left: 4rem; ">
+                                <span style="color: rgb(9, 163, 9); font-size: 1.5rem;">
+                                    <b>安徽省智慧农业技术与装备重点实验室</b>
+                                </span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="http://elab.ulenp.com/" style="display: flex; align-items: center; text-decoration: none;margin-left: 4rem;margin-top: 1rem;">
+                                <span style="color: rgb(9, 163, 9); font-size: 1.5rem;">
+                                    <b>安徽省农情信息感知与智能计算工程研究中心</b>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 移动端菜单 -->
+                    <div class="mobile-menu">
+                        <a href="javascript:void(0)" class="mobile-menu-item" onclick="window.location.href='tea.html'">历史文化</a>
+                        <a href="javascript:void(0)" class="mobile-menu-item" onclick="window.location.href='tea-qa.html'">种质资源	</a>
+						<a href="javascript:void(0)" class="mobile-menu-item" onclick="window.location.href='tea-pdf.html'">智慧育种</a>
+                        <a href="javascript:void(0)" class="mobile-menu-item" onclick="window.location.href='tea-pdf.html'">高效栽培</a>
+                        <a href="javascript:void(0)" class="mobile-menu-item" onclick="window.location.href='tea-qa.html'">	病虫防控</a>
+                        <a href="javascript:void(0)" class="mobile-menu-item" onclick="window.location.href='tea-pdf.html'">贮藏保鲜</a>
+                        <a href="javascript:void(0)" class="mobile-menu-item" onclick="window.location.href='tea-qa.html'">产品加工</a>
+                    </div>
+                    <div style="width: 50%;">
+                        <div id="change-password-dialog" class="change-password-dialog">
+                            <h3>修改密码</h3>
+                            <form class="change-password-form" onsubmit="handlePasswordChange(event)">
+                                <div class="login-form-group">
+                                    <label for="new-password">新密码</label>
+                                    <input type="password" id="new-password" placeholder="请输入新密码">
+                                </div>
+                                <div class="login-form-group">
+                                    <label for="confirm-password">确认密码</label>
+                                    <input type="password" id="confirm-password" placeholder="请再次输入新密码">
+                                </div>
+                                <div class="login-form-actions">
+                                    <button type="button" onclick="document.getElementById('change-password-dialog').style.display='none'">取消</button>
+                                    <button type="submit">确认修改</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="login-dialog" class="login-dialog">
+                            <h3>用户登录</h3>
+                            <form class="login-form-main" onsubmit="handleLogin(event)">
+                                <div class="login-form-group">
+                                    <label for="username">用户名</label>
+                                    <input type="text" id="username" placeholder="请输入用户名">
+                                </div>
+                                <div class="login-form-group">
+                                    <label for="password">密码</label>
+                                    <input type="password" id="password" placeholder="请输入密码">
+                                </div>
+                                <div class="login-form-actions">
+                                    <button type="button" onclick="document.getElementById('login-dialog').style.display='none'">取消</button>
+                                    <button type="submit">登录</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="slider-shape ss-four layer" data-depth="0.40"><img src="img/bg/slider_shape04.png" alt="shape"></div>
+                <div id="app" v-cloak>
+                    <!--底座-->
+                    <div class="rotation3D-baseMap"></div>
+                    <!--旋转3D-->
+                    <div id="rotation3D" class="rotation3D">
+                        <button class="center">中心</button>
+                        <div class="itemList">
+                            <div class="rotation3D__item" :class="item.type" v-for="item in itemList">
+                                <div class="scale">
+                                    <div class="baseImg"></div>
+                                    <div class="cont">
+                                        <i class="iconfont" :class="item.icon" ></i>
+                                        <a href="javascript:void(0)" @click="item.onClick" style="color: aliceblue;font-family:serif;">{{item.name}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lineList">
+                            <div class="rotation3D__line" v-for="item in itemList" :class="item.type">
+                                <div v-if="item.type=='blue'" class="pos" style="left: -16px;">
+                                    <svg width="50" height="400">
+                                        <path id="path3" d="M20 400 S 0 200, 20 0" stroke-dasharray="5,10"/>
+                                        <path id="path4" d="M20 400 S 40 200, 20 0" stroke-dasharray="5,10"/>
+                                    </svg>
+                                    <div class="dot dot3 el-icon-caret-right"></div>
+                                    <div class="dot dot4 el-icon-caret-right"></div>
+                                </div>
+                                <div v-if="item.type=='yellow'" class="pos" style="left: -16px;">
+                                    <svg width="50" height="400">
+                                        <path id="path3" d="M20 400 S 0 200, 20 0" stroke-dasharray="5,10"/>
+                                        <path id="path4" d="M20 400 S 40 200, 20 0" stroke-dasharray="5,10"/>
+                                    </svg>
+                                    <div class="dot dot3 el-icon-caret-right"></div>
+                                    <div class="dot dot4 el-icon-caret-right"></div>
+                                </div>
+                                <div v-if="item.type=='green'" class="pos" style="left: -20px;">
+                                    <svg width="50" height="400">
+                                        <path id="path3" d="M20 400 S 0 200, 20 0" stroke-dasharray="5,10"/>
+                                        <path id="path4" d="M20 400 S 40 200, 20 0" stroke-dasharray="5,10"/>
+                                    </svg>
+                                    <div class="dot dot3 el-icon-caret-right"></div>
+                                    <div class="dot dot4 el-icon-caret-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="about-area about-p pt-120 pb-120 p-relative fix">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <div class="about-content s-about-content  wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s">
+                                <div class="about-title second-title pb-25">  
+                                    <!-- <h5>About Us</h5> -->
+                                    <h2>砀山酥梨</h2>                                   
+                                </div>
+                                <p >解析梨的遗传密码，促进梨品种改良及产业发展，培育更好吃又优质的梨，丰富果篮子，满足市场需求，增加梨农收益，助力乡村振兴。</p>
+								<p >外观特点：果实近圆柱形或不正广卵圆形，顶部平截稍宽，平均单果重 250 克，大果可达 1000 克以上。果皮为绿黄色，贮后变为黄色，果点小而密，果面不平，果皮薄。果心较小，果肉白色。
+
+<p >
+口感特点：砀山酥梨以酥脆甘甜著称，果肉洁白如玉，酥脆爽口，浓甜如蜜，汁水丰富，弹指即破，入口即酥，落地无渣，自古就有 “砀山梨，皮儿薄，落到地上找不着” 的说法。
+<p >营养特点：砀山酥梨营养丰富，含可溶性固形物 11%-14%，可溶性糖 7.35%，可滴定酸 0.10%，维生素 C 含量 0.21 毫克 / 百克，还含有多种人体必需的氨基酸、矿物质等，具有较高的营养价值。
+<p >生长特点：树势强，萌芽率为 82%，一般剪口下多抽生 2 个长枝。定植后 3 至 4 年开始结果，以短果枝结果为主，腋花芽结果能力强，丰产性好，管理好可实现丰产、稳产。
+<p >品种特点：主要品种有金盖酥、白皮酥、青皮酥及伏酥等，以金盖酥品质最佳。不同品种在外观、成熟时间等方面略有差异，如白皮酥成熟较早，青皮酥成熟较迟，伏酥果形较大且成熟最早。
+                            </div>
+                        </div>
+                         <div class="col-lg-7 col-md-12 col-sm-12">
+                                <video style="width: 100%;height: 100%" controls>
+                                    <source src="video/1.mp4" type="video/mp4"> 
+                                </video>
+
+                        </div>
+                        
+					
+                     
+                    </div>
+                </div>
+            </section>
+            <!-- about-area-end -->
+             <!-- services-five-area -->
+         <section id="services-05" class="services-05 pt-120 pb-100 p-relative fix" style="background: url(img/bg/services-bg.png); background-repeat: no-repeat;">
+            <div class="container">
+               <div class="row justify-content-center align-items-center center-align">
+                  <div class="col-lg-6 col-md-12">
+                     <div class="section-title text-center mb-20 wow fadeInDown  animated" data-animation="fadeInDown" data-delay=".4s">
+                        <!-- <h5>What we grow</h5> -->
+                        <h2>
+                          
+                        </h2>
+                     </div>
+                  </div>
+                  </div>
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                       <div class="services-box-05 mb-30 hover-zoomin wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                           <div class="services-icon-05">
+                               <a href=""><img src="assets/images/pear/lishi.jpg" alt="icon01" style="width: 100%; height: auto;"></a>
+                           </div>
+                           <div class="services-content-05">
+                              <div class="icon">
+                                  <h4> <a href="">历史文化</a> </h4>
+                              </div>
+                              <p>基于数千年梨树栽培史和丰富的品种基因数据，融合古籍文献、地方志与现代果树学知识，重现梨在中国农业文明中的演化脉络与文化意象。</p>
+                           </div>
+                        </div>
+                   </div>
+                   <div class="col-lg-4">
+                        <div class="services-box-05 mb-30 hover-zoomin wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                           <div class="services-icon-05">
+                               <a href=""><img src="assets/images/pear/zhongzhi.jpg" alt="icon01"></a>
+                           </div>
+                           <div class="services-content-05">
+                              <div class="icon">
+                                 <h4><a href="">种质资源</a> </h4>
+                              </div>
+                              <p>整合国内外梨种质资源数据，实现多维度表型、基因型与产区信息智能管理，为品种创新与保护提供数字化支撑。</p>
+                              <br>
+                            </div>
+                        </div>
+                        </div>
+                   <div class="col-lg-4">
+                        <div class="services-box-05 mb-30 hover-zoomin wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                           <div class="services-icon-05">
+                               <a href=""><img src="assets/images/pear/3.jpg" alt="icon01"></a>
+                           </div>
+                           <div class="services-content-05">
+                              <div class="icon">
+                                  <h4><a href="">智慧育种</a></h4>
+                              </div>
+                              <p>基于AI算法与基因编辑模型，精准识别优良性状基因，缩短育种周期，提升抗逆性与果品质。</p>
+                              <br><br><br>
+                            </div>
+                        </div>
+                        </div>
+                   <div class="col-lg-4">
+                       <div class="services-box-05 mb-30 hover-zoomin wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                           <div class="services-icon-05">
+                               <a href=""><img src="assets/images/pear/4.jpg" alt="icon01"></a>
+                           </div>
+                           <div class="services-content-05">
+                              <div class="icon">
+                                  <h4><a href="">高效栽培</a> </h4>
+                              </div>
+                              <p>融合气象、土壤与生长模型，构建智能栽培决策系统，实现精准施肥、灌溉与修剪的智慧管控。</p><br>
+                           </div>
+                        </div>
+                        </div>
+                  <div class="col-lg-4">
+                        <div class="services-box-05 mb-30 hover-zoomin wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                           <div class="services-icon-05">
+                               <a href=""><img src="assets/images/pear/5.jpg" alt="icon01"></a>
+                           </div>
+                           <div class="services-content-05">
+                              <div class="icon">                             
+                                  <h4><a href="">病虫防控</a> </h4>
+                              </div>
+                              <p>通过图像识别与预测模型，实时监测病虫害动态，提供自动诊断与绿色防控方案。</p>
+                              <br>
+                            </div>
+                        </div>
+                        </div>
+                   <div class="col-lg-4">
+                       <div class="services-box-05 mb-30 hover-zoomin wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                           <div class="services-icon-05">
+                               <a href=""><img src="assets/images/pear/6.jpg" alt="icon01"></a>
+                           </div>
+                           <div class="services-content-05">
+                              <div class="icon">
+                                  <h4><a href="">贮藏保鲜</a> </h4>
+                              </div>
+                              <p>构建梨果采后品质衰变模型，优化冷链与气调技术，实现储运过程智能监测与质量追溯。</P>
+                              <br><br><br>
+                           </div>
+                        </div>
+                        </div>
+						
+						         <div class="col-lg-4">
+                        <div class="services-box-05 mb-30 hover-zoomin wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                           <div class="services-icon-05">
+                               <a href=""><img src="assets/images/pear/7.jpg" alt="icon01"></a>
+                           </div>
+                           <div class="services-content-05">
+                              <div class="icon">                             
+                                  <h4><a href="">产品加工</a> </h4>
+                              </div>
+                              <p>利用AI识别最佳加工参数，提升梨汁、梨膏、梨脆片等产品品质与营养保留率。</p>
+                              <br>
+                            </div>
+                        </div>
+                        </div>
+                   <div class="col-lg-4">
+                       <div class="services-box-05 mb-30 hover-zoomin wow fadeInUp  animated" data-animation="fadeInUp" data-delay=".4s">
+                           <div class="services-icon-05">
+                               <a href=""><img src="assets/images/pear/jiyinku.jpg" alt="icon01"></a>
+                           </div>
+                           <div class="services-content-05">
+                              <div class="icon">
+                                  <h4><a href="">基因库谱</a> </h4>
+                              </div>
+                              <p>建立覆盖主要梨属品种的基因组数据库，实现基因溯源、功能注释与分子育种辅助决策。</P>
+                              <br><br><br>
+                           </div>
+                        </div>
+                        </div>
+               
+               </div>
+            </div>
+         </section>
+         <!-- 人才培养专题 -->
+        <section class="talent-section" style="padding: 80px 0; background-color: #f9f5e9;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- 左半部分 - 人才培养内容 -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="talent-content wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                            <div class="section-title mb-30">  
+                                <h2 style="color: #5a3e1f;">人才培养</h2>
+                                <div class="title-divider" style="background-color: #8B4513;"></div>                                   
+                            </div>
+                            <div class="talent-details">
+                                <h4 style="color: #8B4513;">专业教育与技能培训</h4>
+                                <p>• 在智能农业的时代，人才是最核心的驱动力。</p>
+                                <p>• “梨大模型”以科研为引擎、教育为根基，构建产学研一体化人才培养体系。</p>
+								 <p>• 学生不仅学习AI算法与生物育种知识，更亲身参与模型训练、基因注释与智能栽培实践。</p>
+                                
+                                <h4 style="color: #8B4513; margin-top: 20px;">创新人才培养</h4>
+                                <p>• 梨产业创新人才孵化计划</p>
+                                <p>• 项目形成“科研—教学—应用”三维融合机制，培育懂算法、会育种、能实践的农业智能化新型人才，为中国数字果业注入持续创新力量。</p>
+                                
+                                <h4 style="color: #8B4513; margin-top: 20px;">国际交流与合作</h4>
+                                <p>• 国际梨文化交流学者计划</p>
+                                <p>• 与国际机构建立联合研究机制，共同开展梨属种质基因组解析、数字化育种与智慧果园建设研究。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 右半部分 - 图片 -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="talent-image wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s">
+                            <img src="assets/images/pear/tuandui.jpg" alt="茶产业人才培养" style="border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 人才培养专题结束 -->
+
+        <!-- 市场与品牌 - 黄大茶 -->
+        <section class="yellow-tea-section" style="padding: 80px 0; background-color: #ffffff;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- 左半部分 - 黄大茶内容 -->
+                    <div class="col-lg-6 col-md-12 order-lg-1 order-md-1 order-2">
+                        <div class="yellow-tea-content wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                            <div class="section-title mb-30">  
+                                <h2 style="color: #8B4513;">市场与品牌</h2>
+                                <h3 style="color: #d4a017;">砀山酥梨</h3>
+                                <div class="title-divider" style="background-color: #d4a017;"></div>                                   
+                            </div>
+                            <div class="yellow-tea-details">
+                                <h4 style="color: #8B4513;">品牌特色</h4>
+                                <p>• 历史悠久：源自明代，传统工艺传承600余年</p>
+                                 <p>• 历史悠久，明万历五年（公元 1577 年）《徐州府志》就有 “砀山产梨” 的记载，清光绪后梨树栽培开始发展，1958 年砀山酥梨开始出口。</p>
+								 <p>• 属暖温带半湿润季风气候，年均气温 14.2℃，年日照时数达 2500 小时以上，昼夜温差平均在 10℃以上，有利于果实糖分积累。土壤以沙壤土为主，pH 值在 6.8-7.2 之间，透气性好，富含钾、钙、镁等矿物质元素，为酥梨根系发育和养分吸收提供了理想环境。</p>
+                               
+                                
+                                <h4 style="color: #8B4513; margin-top: 20px;">形态与品质特点</h4>
+                                <p>• 外观：果实呈近圆形或扁圆形，平均单果重 300-400 克，最大可达 600 克；果皮淡黄色，具蜡质光泽，果点小而密；果肉洁白如玉，质地细脆，石细胞极少，可食率达 92% 以上；果核小，汁液丰富。</p>
+                                <p>• 口感：在国家级水果感官评价体系中，砀山酥梨在 “脆度”“汁感”“香气” 三项指标评分均位列全国梨类前三。初入口感清脆爽利，咬合声明显，咀嚼过程中果肉细腻无渣，风味释放前调为清新青草香，中调显现蜂蜜甜香，尾韵微带花香，回甘持久，口腔清爽不粘腻。</p>
+                                <p>• 营养成分：每 100 克砀山酥梨果肉含水分 85.8 克、总糖 9.2 克、膳食纤维 3.1 克、维生素 C4.8 毫克，还含有钾、多酚类物质、黄酮类化合物等，具有抗氧化、增强免疫力、清热润肺等功效。</p>
+                                
+                                <h4 style="color: #8B4513; margin-top: 20px;">荣誉与价值</h4>
+                                <p>• 所获荣誉：1985 年被评为全国名特水果，1993 年获泰国国际博览会 “龙马金奖”，2015 年获得 “中国驰名商标” 称号，2018 年获国家农产品地理标志登记保护，2023 年被纳入农业品牌精品培育计划名单。</p>
+                                <p>• 经济价值：砀山县素有 “世界梨都” 美誉，全县梨树种植面积约 40 万亩，其中砀山酥梨 25 万亩，2024 年砀山酥梨产值达 19.24 亿元，全产业链产值达 127.43 亿元，品牌价值近 200 亿元。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 右半部分 - 黄大茶图片 -->
+                    <div class="col-lg-6 col-md-12 order-lg-2 order-md-2 order-1 mb-md-30">
+                        <div class="yellow-tea-image wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s">
+                            <img src="assets/images/pear/ssl.jpg" alt="黄大茶" style="border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-height: 500px; width: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style=" bottom: 0;   background: #f9f5e9;  z-index: 9999; width: 100%; 
+                                    display: flex; align-items: center; justify-content: center; gap: 15px;">
+                            <a href="https://tealab.ahau.edu.cn/index.htm" style="display: flex; align-items: center; text-decoration: none;">
+                                <img src="assets\images\tea\logo.png" alt="实验室logo" 
+                                    style="width: 7rem; height: 7rem; margin-right: 10px;">  <!-- 新增logo -->
+                                <span style="color: #8B4513; font-size: 1.5rem;">
+                                    作物遗传与种质创新国家重点实验室
+                                </span>
+                            </a>
+                            <a href="http://elab.ulenp.com/" style="display: flex; align-items: center; text-decoration: none;">
+                                <span style="color: #8B4513; font-size: 1.5rem; margin-left: 50px;">
+                                    安徽省智慧农业技术与装备重点实验室
+                                </span>
+                            </a>
+                            <a href="http://elab.ulenp.com/" style="display: flex; align-items: center; text-decoration: none;">
+                                <span style="color: #8B4513; font-size: 1.5rem; margin-left: 50px;">
+                                    安徽省农情信息感知与智能计算工程研究中心
+                                </span>
+                            </a>
+                        </div>
+         <!-- services-three-area -->
+            <!-- steps-area -->
+
+        <!-- footer-end -->
+
+		<!-- JS here -->
+         <!-- 引入 -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/parallax-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://s3.pstatp.com/cdn/expire-1-M/vue/2.6.10/vue.min.js"></script>
+        <script src="js/rotation3D/rotation3D.js"></script>
+        <script>
+            function handleLoginButtonClick() {
+                document.getElementById('login-dialog').style.display = 'block';
+            }
+
+            // function handleLogin(event) {
+            //     event.preventDefault();
+            //     const username = document.getElementById('username').value;
+            //     const password = document.getElementById('password').value;
+                
+            //     // 这里可以添加实际的登录验证逻辑
+            //     if (username && password) {
+            //         // 登录成功后显示用户信息
+            //         document.getElementById('login-btn').style.display = 'none';
+            //         document.getElementById('login-dialog').style.display = 'none';
+            //         document.getElementById('user-info').style.display = 'block';
+            //         document.getElementById('username-display').textContent = username;
+            //     }
+            // }
+
+            function handleChangePassword() {
+                document.getElementById('change-password-dialog').style.display = 'block';
+            }
+
+            function handlePasswordChange(event) {
+                event.preventDefault();
+                const newPassword = document.getElementById('new-password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+                const username = sessionStorage.getItem('username');
+                const token = sessionStorage.getItem('token');
+
+                if (!newPassword || !confirmPassword) {
+                    alert('请填写完整的密码信息');
+                    return;
+                }
+
+                if (newPassword !== confirmPassword) {
+                    alert('两次输入的密码不一致');
+                    return;
+                }
+
+                // 发送修改密码请求到后端
+                fetch('http://localhost:8080/tea/changePassword', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: newPassword
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) throw new Error('修改失败');
+                    return response.json();
+                })
+                .then(data => {
+                    if(data.code !== 200){
+                        throw new Error(data.msg)
+                    }else{
+                        alert('密码修改成功');
+                        document.getElementById('change-password-dialog').style.display = 'none';
+                        // 清空输入框
+                        document.getElementById('new-password').value = '';
+                        document.getElementById('confirm-password').value = '';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('修改密码时发生错误，请稍后重试');
+                });
+            }
+
+            function checkLoginBeforeRedirect(url) {
+                return function() {
+                    if(isLoggedIn) {
+                        window.location.href = `${url}`;
+                    } else {
+                        alert('请先登录后再访问此功能');
+                        document.getElementById('login-dialog').style.display = 'block';
+                    }
+                };
+            }
+            var app = new Vue({
+                el: "#app",
+                //数据
+                data: {
+                    itemList: [
+                        { name:'历史文化', type:'green', icon:'icon-book', href:'javascript:void(0)', onClick: checkLoginBeforeRedirect('http://10.5.195.9:7860/') },
+                        { name:'种质资源', type:'blue', icon:'icon-flask', href:'javascript:void(0)', onClick: checkLoginBeforeRedirect('tea.html') },
+                        { name:'智慧育种', type:'yellow', icon:'icon-factory', href:'javascript:void(0)', onClick: checkLoginBeforeRedirect('http://120.26.84.167:894') },
+                        { name:'高效栽培', type:'green', icon:'icon-leaf', href:'javascript:void(0)', onClick: checkLoginBeforeRedirect('http://120.26.84.167:887') },
+                        { name:'病虫防控', type:'blue', icon:'icon-pagoda', href:'javascript:void(0)', onClick: checkLoginBeforeRedirect('http://120.26.84.167:9066') },
+                        { name:'贮藏保鲜', type:'yellow', icon:'icon-travel', href:'javascript:void(0)', onClick: checkLoginBeforeRedirect('http://120.26.84.167:895') },
+						   { name:'产品加工', type:'blue', icon:'icon-pagoda', href:'javascript:void(0)', onClick: checkLoginBeforeRedirect('http://120.26.84.167:9066') },
+                        { name:'基因库谱', type:'yellow', icon:'icon-travel', href:'javascript:void(0)', onClick: checkLoginBeforeRedirect('http://120.26.84.167:895') },
+                    ],
+                },
+                mounted: function () {
+                    new Rotation3D({
+                        id: '#rotation3D',
+                        farScale: 0.6,
+                        // farScale: 1,
+                        xRadius: 0,  //x半径压缩
+                        yRadius: 220,  //y半径压缩
+                        // yRadius: 0,  //y半径压缩
+                        // autoPlay:true,
+                        // autoPlayDelay:6000,
+                    })
+
+                },
+                methods: {},
+            });
+        </script>
+        <script>
+        const SESSION_TIMEOUT = 30 * 60 * 1000; // 30分钟超时时间
+        let sessionTimer;
+        let isLoggedIn = false;
+
+        // 检查token状态
+        async function checkTokenStatus() {
+            try {
+                const token = sessionStorage.getItem('token');
+                if (!token) {
+                    handleLogout();
+                    return;
+                }
+
+                const response = await fetch('http://120.26.84.167:9111/tea/checkToken', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (!response.ok) {
+                    handleLogout();
+                }
+            } catch (error) {
+                console.error('Token检查失败:', error);
+                handleLogout();
+            }
+        }
+
+        // 更新用户活动时间
+        function updateUserActivity() {
+            clearTimeout(sessionTimer);
+            sessionTimer = setTimeout(handleLogout, SESSION_TIMEOUT);
+        }
+
+        // 处理登出
+        function handleLogout() {
+            const token = sessionStorage.getItem('token');
+            if (token) {
+                fetch('http://120.26.84.167:9111/tea/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        sessionStorage.removeItem('token');
+                        sessionStorage.removeItem('username');
+                        clearTimeout(sessionTimer);
+                        isLoggedIn = false;
+                        document.getElementById('login-btn').style.display = 'block';
+                        document.getElementById('user-info').style.display = 'none';
+                        document.getElementById('username').value = '';
+                        document.getElementById('password').value = '';
+                        document.getElementById('login-btn').textContent = '登录';
+                        alert('您已退出登录');
+                    } else {
+                        alert('退出登录失败');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        }
+
+        // 监听用户活动
+        document.addEventListener('mousemove', updateUserActivity);
+        document.addEventListener('keypress', updateUserActivity);
+        document.addEventListener('click', updateUserActivity);
+
+        // 处理登录成功
+        function handleLoginSuccess(token,username) {
+            sessionStorage.setItem('token', token);
+            sessionStorage.setItem('username', username);
+            updateUserActivity();
+            setInterval(checkTokenStatus, 600000); // 每分钟检查一次token状态
+            isLoggedIn = true;
+            document.getElementById('login-btn').style.display = 'none';
+            document.getElementById('login-dialog').style.display = 'none';
+            document.getElementById('user-info').style.display = 'block';
+            document.getElementById('username-display').textContent = username;
+            alert('登录成功');
+        }
+
+        // 登录表单提交处理
+        document.querySelector('.login-form-main').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if(!username || !password) {
+                alert('请输入用户名和密码');
+                return;
+            }
+            
+            fetch('http://120.26.84.167:9111/tea/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('登录失败');
+                return response.json();
+            })
+            .then(data => {
+                if(data.code !== 200){
+                    document.getElementById('login-dialog').style.display = 'none';
+                    throw new Error(data.msg)
+                }else{
+                    handleLoginSuccess(data.token,username);
+                }
+                
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert(error.message);
+            });
+        });
+
+        // 页面加载时检查登录状态
+        window.addEventListener('DOMContentLoaded', () => {
+            const token = sessionStorage.getItem('token');
+            const username = sessionStorage.getItem('username');
+            if (token) {
+                checkTokenStatus();
+                updateUserActivity();
+                isLoggedIn = true;
+                document.getElementById('login-btn').style.display = 'none';
+                document.getElementById('login-dialog').style.display = 'none';
+                document.getElementById('user-info').style.display = 'block';
+                document.getElementById('username-display').textContent = username;
+            }
+        });
+
+        function handleLoginButtonClick() {
+            if (isLoggedIn) {
+                handleLogout();
+            } else {
+                document.getElementById('login-dialog').style.display = 'block';
+            }
+        }
+        </script>
+    </body>
+    
+</html>
+            
