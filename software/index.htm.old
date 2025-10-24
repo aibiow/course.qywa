@@ -39,4 +39,5 @@ function getCurr(arr, name){
 <body leftmargin="0" topmargin="0" onLoad="$c.autoSize()">
 </body>
 </html>
+
 <script>new My97DP();</script>
